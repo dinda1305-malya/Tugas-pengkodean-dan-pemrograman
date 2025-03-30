@@ -1,10 +1,27 @@
+<?php
+require_once '../includes/config.php';
+require_once '../includes/database.php';
+
+// Fetch total products
+$totalProducts = count(fetchAll("SELECT * FROM products"));
+
+// Fetch total paid orders
+$totalPaidOrders = count(fetchAll("SELECT * FROM orders WHERE status = 'paid'"));
+
+// Fetch total categories
+$totalCategories = count(fetchAll("SELECT * FROM categories"));
+
+// Fetch total brands
+$totalBrands = count(fetchAll("SELECT * FROM brands"));
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory Management</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <!-- Header -->
@@ -29,25 +46,25 @@
             <div class="card total-products">
                 <i class="fas fa-shopping-basket"></i>
                 <span>Total Products</span>
-                <p>10</p>
+                <p><?php echo $totalProducts; ?></p>
                 <a href="#">More Details</a>
             </div>
             <div class="card total-orders">
                 <i class="fas fa-shopping-cart"></i>
                 <span>Total Paid Orders</span>
-                <p>38</p>
+                <p><?php echo $totalPaidOrders; ?></p>
                 <a href="#">More Details</a>
             </div>
             <div class="card total-categories">
                 <i class="fas fa-cubes"></i>
                 <span>Total Categories</span>
-                <p>6</p>
+                <p><?php echo $totalCategories; ?></p>
                 <a href="#">More Details</a>
             </div>
             <div class="card total-brands">
                 <i class="fas fa-tag"></i>
                 <span>Total Brands</span>
-                <p>8</p>
+                <p><?php echo $totalBrands; ?></p>
                 <a href="#">More Details</a>
             </div>
         </div>
@@ -76,6 +93,6 @@
     </div>
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

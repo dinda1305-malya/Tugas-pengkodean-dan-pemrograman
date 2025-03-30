@@ -1,0 +1,107 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    padding: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card i {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.card span {
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.card a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sales-analysis {
+    margin-top: 40px;
+}
+
+.sales-analysis h2 {
+    margin-bottom: 20px;
+}
+
+.sales-analysis form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sales-analysis select, .sales-analysis button {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.chart {
+    height: 400px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
