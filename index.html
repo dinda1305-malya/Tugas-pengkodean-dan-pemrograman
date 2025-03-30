@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Persediaan & Penjualan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>📦 Aplikasi Persediaan & Penjualan</h1>
+
+    <!-- Form Tambah Produk -->
+    <div class="form-container">
+        <h2>Tambah Produk</h2>
+        <div class="form-group">
+            <label for="productName">Nama Produk:</label>
+            <input type="text" id="productName" placeholder="Masukkan nama">
+        </div>
+        <div class="form-group">
+            <label for="productStock">Jumlah Stok:</label>
+            <input type="number" id="productStock" placeholder="Masukkan jumlah">
+        </div>
+        <button onclick="addProduct()">Tambah</button>
+    </div>
+
+    <!-- Daftar Stok -->
+    <h2>📋 Daftar Stok</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Produk</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="inventoryList"></tbody>
+    </table>
+
+    <!-- Form Penjualan -->
+    <div class="form-container">
+        <h2>Transaksi Penjualan</h2>
+        <div class="form-group">
+            <label for="sellProduct">Pilih Produk:</label>
+            <select id="sellProduct"></select>
+        </div>
+        <div class="form-group">
+            <label for="sellQuantity">Jumlah:</label>
+            <input type="number" id="sellQuantity" placeholder="Masukkan jumlah">
+        </div>
+        <button onclick="sellProduct()">Jual</button>
+    </div>
+
+    <!-- Daftar Transaksi -->
+    <h2>📝 Riwayat Transaksi</h2>
+    <ul id="transactionList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
